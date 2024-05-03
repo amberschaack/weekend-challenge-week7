@@ -14,30 +14,23 @@
     <main>
       <section>
         <h2>Add Employee</h2>
-        <form id="salary-form">
+        <form id="salary-form" onSubmit="addEmployee(event)">
           <input
             id="first-name"
             placeholder="First Name"
             type="text"
-            value="Amber"
+            required
           />
-          <input
-            id="last-name"
-            placeholder="Last Name"
-            type="text"
-            value="Schaack"
-          />
-          <input id="i-d" placeholder="ID" type="number" value="9" />
-          <input id="title" placeholder="Title" type="text" value="Student" />
+          <input id="last-name" placeholder="Last Name" type="text" required />
+          <input id="i-d" placeholder="ID" type="number" required />
+          <input id="title" placeholder="Title" type="text" required />
           <input
             id="annual-salary"
             placeholder="Annual Salary"
             type="number"
-            value="10000"
+            required
           />
-          <button id="submit-button" onclick="addEmployee(event)" type="submit">
-            Submit
-          </button>
+          <button id="submit-button" type="submit">Submit</button>
         </form>
       </section>
       <section>

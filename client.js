@@ -57,7 +57,7 @@ function removeEmployee(event) {
 function calculateMonthlySalary() {
   let total = 0;
   for (const employee of employees) {
-    total += employee.annualSalary / 12;
+    total += Math.ceil(employee.annualSalary / 12);
   }
   console.log(total);
   const monthlyElement = document.getElementById('total-monthly');
