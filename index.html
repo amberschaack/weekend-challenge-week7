@@ -14,7 +14,7 @@
     <main>
       <section>
         <h2>Add Employee</h2>
-        <form id="salary-form" onsubmit="addEmployee(event)">
+        <form id="salary-form">
           <input
             id="first-name"
             placeholder="First Name"
@@ -35,22 +35,26 @@
             type="number"
             value="10000"
           />
-          <button id="submit-button">Submit</button>
+          <button id="submit-button" onclick="addEmployee(event)" type="submit">
+            Submit
+          </button>
         </form>
       </section>
       <section>
         <h2>Employees</h2>
         <table>
-          <thead>
-            <tr>
-              <th>First Name</th>
-              <th>Last Name</th>
-              <th>ID</th>
-              <th>Title</th>
-              <th>Annual Salary</th>
-              <th></th>
-            </tr>
-          </thead>
+          <tbody id="table-body">
+            <thead>
+              <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Annual Salary</th>
+                <th></th>
+              </tr>
+            </thead>
+          </tbody>
         </table>
       </section>
       <section>
