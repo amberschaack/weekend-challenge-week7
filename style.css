@@ -37,3 +37,8 @@ tbody tr:nth-child(even) {
 #total-monthly {
   text-align: right;
 }
+
+.high {
+  color: red;
+  font-size: 1em;
+}

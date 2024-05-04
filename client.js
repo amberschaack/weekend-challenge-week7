@@ -40,7 +40,7 @@ function renderEmployees() {
       <td>${employees[i].lastName}</td>
       <td>${employees[i].ID}</td>
       <td>${employees[i].title}</td>
-      <td>${employees[i].annualSalary}</td>
+      <td>$${employees[i].annualSalary}</td>
       <td><button id=${i} onclick="removeEmployee(event)">Delete</button></td>
      </tr>
     `;
@@ -61,5 +61,10 @@ function calculateMonthlySalary() {
   }
   console.log(total);
   const monthlyElement = document.getElementById('total-monthly');
-  monthlyElement.innerText = `Total Monthly: $${total}`;
+  //   monthlyElement.innerText = `Total Monthly: $${total}`;
+  if (total > 20000) {
+    monthlyElement.innerHTML = `<h2 class="high">Total Monthly: $${total}</h2>`;
+  } else {
+    monthlyElement.innerText = `Total Monthly: $${total}`;
+  }
 }
