@@ -57,14 +57,16 @@ function removeEmployee(event) {
 function calculateMonthlySalary() {
   let total = 0;
   for (const employee of employees) {
-    total += Math.ceil(employee.annualSalary / 12);
+    total += employee.annualSalary / 12;
   }
   console.log(total);
   const monthlyElement = document.getElementById('total-monthly');
   //   monthlyElement.innerText = `Total Monthly: $${total}`;
   if (total > 20000) {
-    monthlyElement.innerHTML = `<h2 class="high">Total Monthly: $${total}</h2>`;
+    monthlyElement.innerHTML = `<h2 class="high">Total Monthly: $${total.toFixed(
+      2
+    )}</h2>`;
   } else {
-    monthlyElement.innerText = `Total Monthly: $${total}`;
+    monthlyElement.innerText = `Total Monthly: $${total.toFixed(2)}`;
   }
 }
